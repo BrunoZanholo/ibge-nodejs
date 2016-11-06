@@ -24,8 +24,11 @@ function getCidades(uf){
                     nome: $(this).text().trim()
                 };
 
+            //node V7
                 //if (cidade.nome.indexOf('capital')){         
-                    fs.appendFile('execs/' + filename, uf.id + ' - ' + uf.nome + ' (' + uf.sigla + ') - ' + cidade.id + ' - ' + cidade.nome + '\n');
+                    fs.appendFile('execs/' + filename, uf.id + ' - ' + uf.nome + ' (' + uf.sigla + ') - ' + cidade.id + ' - ' + cidade.nome + '\n', (err) => {
+                         if (err) throw err;  
+                    });
                 //}
             });
         }
