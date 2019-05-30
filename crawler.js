@@ -1,5 +1,5 @@
 var request = require('request');
-var cheerio = require('cheerio');
+var cheerio = require('cheerio');//teste
 var fs = require('fs');
 
 var filename = new Date().getTime() + '.json';
